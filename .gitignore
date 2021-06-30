@@ -112,3 +112,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#serialized models
+.pkl
+
+#Macs
+.DS_Store
