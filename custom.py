@@ -75,10 +75,10 @@ def transform(data,model):
 
         #Some categorical features (diag_1), have float values which in reality are categories. Catboost takes either int or object as input
         #so I am casting.
-        try:
-            data[c] = data[c].astype(int)
-        except:
-            pass
+        #try:
+        #    data[c] = data[c].astype(int)
+        #except:
+            #pass
 
     # Find out if `Diabetes|`diabetes` exists in diag_1_desc column
     data['diabetes'] = data['diag_1_desc'].apply(lambda x: find_diabetes_text(x))
