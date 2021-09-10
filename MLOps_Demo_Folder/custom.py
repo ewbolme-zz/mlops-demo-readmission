@@ -115,7 +115,7 @@ def transform(data,model):
 
     # Find out if `Diabetes|`diabetes` exists in diag_1_desc column
     data['diabetes'] = data['diag_1_desc'].apply(lambda x: find_diabetes_text(x))
-    data.data(["readmitted","diag_1_desc"], inplace=True, axis=1)    
+    data.drop(["readmitted","diag_1_desc"], inplace=True, axis=1)    
 
     # Fill null values for numeric features
     data = data.fillna(0)
